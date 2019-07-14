@@ -1,0 +1,16 @@
+[
+{
+  "modid": "noadvancements",
+  "name": "No Advancements",
+  "description": "Prevents loading of advancements",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Laike_Endaril"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
