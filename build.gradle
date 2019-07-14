@@ -43,6 +43,14 @@ processResources {
     }
 }
 
+jar {
+    manifest {
+        attributes 'Agent-Class': 'com.fantasticsource.noadvancements.AdvancementAgent'
+        attributes 'Can-Retransform-Classes': 'true'
+        attributes 'Premain-Class': 'com.fantasticsource.noadvancements.AdvancementAgent'
+    }
+}
+
 task deobfJar(type: Jar) {
     from "src/main"
     classifier "deobf"
