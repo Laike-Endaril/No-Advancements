@@ -19,12 +19,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.lang.reflect.Field;
 
-@Mod(modid = NoAdvancements.MODID, name = NoAdvancements.NAME, version = NoAdvancements.VERSION, dependencies = "required-after:fantasticlib@[1.12.2.021,)", acceptableRemoteVersions = "*")
+@Mod(modid = NoAdvancements.MODID, name = NoAdvancements.NAME, version = NoAdvancements.VERSION, dependencies = "required-after:fantasticlib@[1.12.2.032,)", acceptableRemoteVersions = "*")
 public class NoAdvancements
 {
     public static final String MODID = "noadvancements";
     public static final String NAME = "No Advancements";
-    public static final String VERSION = "1.12.2.001";
+    public static final String VERSION = "1.12.2.002";
 
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event)
@@ -47,7 +47,7 @@ public class NoAdvancements
             Field field2 = ReflectionTool.getField(AdvancementManager.class, "field_192784_c", "ADVANCEMENT_LIST");
             field2.set(null, new FakeAdvancementList());
         }
-        catch (NoSuchFieldException | IllegalAccessException e)
+        catch (IllegalAccessException e)
         {
             e.printStackTrace();
         }
